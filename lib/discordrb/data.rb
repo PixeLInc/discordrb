@@ -2641,7 +2641,6 @@ module Discordrb
       @bot = bot
       @owner_id = data['owner_id'].to_i
       @id = data['id'].to_i
-      update_data(data)
 
       @large = data['large']
       @member_count = data['member_count']
@@ -2658,6 +2657,8 @@ module Discordrb
       process_presences(data['presences'])
       process_channels(data['channels'])
       process_voice_states(data['voice_states'])
+
+      update_data(data)
 
       # Whether this server's members have been chunked (resolved using op 8 and GUILD_MEMBERS_CHUNK) yet
       @chunked = false
