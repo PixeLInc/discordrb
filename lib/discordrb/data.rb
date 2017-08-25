@@ -2645,7 +2645,6 @@ module Discordrb
       @large = data['large']
       @member_count = data['member_count']
       @splash_id = nil
-      @embed = nil
       @features = data['features'].map { |element| element.downcase.to_sym }
       @members = {}
       @voice_states = {}
