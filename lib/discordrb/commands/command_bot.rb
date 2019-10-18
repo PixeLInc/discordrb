@@ -83,7 +83,8 @@ module Discordrb::Commands
         num_shards: attributes[:num_shards],
         redact_token: attributes.key?(:redact_token) ? attributes[:redact_token] : true,
         ignore_bots: attributes[:ignore_bots],
-        compress_mode: attributes[:compress_mode])
+        compress_mode: attributes[:compress_mode],
+        subscription_events: attributes[:subscription_events])
 
       @prefix = attributes[:prefix]
       @attributes = {
